@@ -1,0 +1,56 @@
+{% block title %}Sign Up{% endblock %}
+{% load static %}
+<style>
+body {
+    background: #3CB371;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #ffffff;    
+}
+.header img {
+    display: block;
+    width: 318px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.archive {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.post-title a {
+    color: #ffffff;
+}
+.article-author {
+    width: 50%;
+    float: left;
+}
+.article-created-date {
+    text-align: right;
+}
+.article {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.exit {
+    float:left;
+    width: 200px;
+    text-align: right;
+}
+h1{
+    width: 960px;
+    text-align: right;
+}
+a{
+    color:#BDB76B ;
+}
+
+</style>
+{% block content %}
+  <h2>Sign up</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign up</button>
+  </form>
+{% endblock %}
